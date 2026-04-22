@@ -1,73 +1,128 @@
-# React + TypeScript + Vite
+# 💈 Barbershop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para la gestión de citas en barberías. Permite a los usuarios agendar servicios seleccionando barberos disponibles, horarios y tipos de corte.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+### Frontend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React + TypeScript
+* Axios
+* CSS personalizado
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* 🔐 Login con autenticación JWT
+* 👤 Registro de usuarios
+* 💈 Visualización de barberos
+* 🖼️ Carga de imágenes de barberos
+* ✂️ Listado de servicios
+* 📅 Agendamiento de citas
+* ⏰ Validación de horarios disponibles
+* 🚫 Restricción de citas según disponibilidad del barbero
+* 📋 Listado de citas desde la API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Instalación y ejecución
+
+### 🔧 Backend (Django)
+
+```bash
+cd backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Servidor en:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+http://127.0.0.1:8000
+```
+
+---
+
+### 💻 Frontend (React)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Aplicación en:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔐 Autenticación
+
+La aplicación utiliza JWT.
+
+Al iniciar sesión:
+
+* Se obtiene un token `access`
+* Se guarda en `localStorage`
+* Se envía en cada request:
+
+```ts
+Authorization: Bearer <token>
+```
+
+---
+
+## 🔗 Endpoints principales
+
+* `POST /api/accounts/login/` → Login
+* `GET /api/accounts/barbers/` → Listar barberos
+* `GET /api/services/` → Listar servicios
+* `GET /api/appointments/` → Listar citas
+* `POST /api/appointments/` → Crear cita
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+barbershop-app/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+│
+├── backend/
+│   ├── apps/
+│   ├── models/
+│   ├── views/
+│   └── serializers/
+│
+└── README.md
+```
+
+---
+
+## 🧠 Notas importantes
+
+* Los barberos deben tener días de trabajo configurados en el admin de Django
+* Los servicios deben existir en base de datos antes de agendar
+* El token JWT es obligatorio para consumir los endpoints protegidos
+
+---
+
+## 👨‍💻 Autores
+
+**Santiago López**
+
+**Jhonatan Barrera**
+
+
