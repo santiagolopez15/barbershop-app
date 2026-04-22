@@ -1,0 +1,132 @@
+.profile-wrapper {
+  min-height: 100vh;
+  background: #f9f9f9; /* Fondo claro */
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 4rem 1rem;
+}
+
+/* HEADER */
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  color: #0f3d2e; /* verde oscuro principal */
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.profile-header p {
+  color: #555;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.profile-content {
+  display: flex;
+  gap: 3rem;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  width: 850px;
+  max-width: 95%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+/* LADO IZQUIERDO */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #0f3d2e;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(15, 61, 46, 0.2);
+}
+
+.change-photo-btn {
+  background: none;
+  border: 1px solid #0f3d2e;
+  color: #0f3d2e;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.change-photo-btn:hover {
+  background: #c9a227; /* dorado */
+  border-color: #c9a227;
+  color: #fff;
+}
+
+/* LADO DERECHO */
+.profile-right {
+  flex: 1;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.profile-field label {
+  font-size: 0.9rem;
+  color: #0f3d2e;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.profile-field input {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  color: #333;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-field input:focus {
+  outline: none;
+  border-color: #0f3d2e;
+  box-shadow: 0 0 8px rgba(15, 61, 46, 0.2);
+}
+
+/* BOTÓN EDITAR */
+.edit-profile-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: #0f3d2e;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+  background: #c9a227; /* dorado */
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(201, 162, 39, 0.3);
+}

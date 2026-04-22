@@ -1,0 +1,349 @@
+/* =========================================================
+   ===============  ADMIN DASHBOARD AISLADO  ================
+   ========================================================= */
+.admin-dashboard {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.admin-dashboard * {
+  box-sizing: border-box;
+}
+
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f5f6f7;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   ====================== SIDEBAR ===========================
+   ========================================================= */
+.admin-dashboard .sidebar {
+  width: 260px;
+  background: #0f3d2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  justify-content: space-between; /* Hace que botones queden siempre visibles */
+  border-right: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-dashboard .sidebar-header {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #eaeaea;
+}
+
+/* ===== MENÚ ===== */
+.admin-dashboard .sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dashboard .sidebar-menu li {
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+}
+
+.admin-dashboard .sidebar-menu li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(6px);
+}
+
+.admin-dashboard .sidebar-menu li.active {
+  background: white;
+  color: #0f3d2e;
+  font-weight: 600;
+  transform: translateX(6px);
+}
+
+/* ===== BOTONES INFERIORES ===== */
+.admin-dashboard .sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.admin-dashboard .sidebar-btn {
+  background: white;
+  color: #0f3d2e;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.admin-dashboard .sidebar-btn:hover {
+  background: #d1b56c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ===================== MAIN CONTENT =======================
+   ========================================================= */
+.admin-dashboard .main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.admin-dashboard .main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-dashboard .main-content::-webkit-scrollbar-thumb {
+  background: #bcbcbc;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   ======================= HEADER ===========================
+   ========================================================= */
+.admin-dashboard .dashboard-header {
+  background: white;
+  padding: 1.6rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dashboard .header-date {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.admin-dashboard .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-dashboard .admin-avatar {
+  font-size: 2rem;
+}
+
+.admin-dashboard .admin-name {
+  font-weight: 600;
+}
+
+/* =========================================================
+   ===================== PANEL GENERAL ======================
+   ========================================================= */
+.admin-dashboard .panel {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.admin-dashboard .panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dashboard .panel-header h2 {
+  font-size: 1.4rem;
+  color: #0f3d2e;
+  margin: 0;
+}
+
+/* =========================================================
+   ======================== TABLAS ==========================
+   ========================================================= */
+.admin-dashboard .table-wrapper {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-dashboard th {
+  background: #f0f0f0;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.admin-dashboard td {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.admin-dashboard .btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.2s ease;
+}
+
+.admin-dashboard .btn-delete:hover {
+  transform: scale(1.25);
+  color: #b91c1c;
+}
+
+/* =========================================================
+   ===================== GRID BARBEROS ======================
+   ========================================================= */
+.admin-dashboard .barberos-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.admin-dashboard .barbero-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.admin-dashboard .barbero-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.admin-dashboard .rating {
+  display: inline-block;
+  background: #0f3d2e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.admin-dashboard .delete-barbero-btn {
+  width: 100%;
+  max-width: 180px;
+  margin: 12px auto 0;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #c0392b;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-dashboard .delete-barbero-btn:hover {
+  background: #e74c3c;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ===================== BOTÓN AÑADIR =======================
+   ========================================================= */
+.admin-dashboard .add-barbero-btn {
+  background: #0f3d2e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.admin-dashboard .add-barbero-btn:hover {
+  background: #b8860b;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   ========================= MODAL ==========================
+   ========================================================= */
+.admin-dashboard .modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.admin-dashboard .modal {
+  background: white;
+  padding: 2rem;
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard .modal input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.admin-dashboard .modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.admin-dashboard .modal-actions button {
+  min-width: 130px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.admin-dashboard .confirm {
+  background: #0f3d2e;
+  color: white;
+  border: none;
+}
+
+.admin-dashboard .confirm:hover {
+  background: #145f46;
+}
+
+.admin-dashboard .cancel {
+  background: #999;
+  color: white;
+  border: none;
+}
+
+.admin-dashboard .cancel:hover {
+  background: #777;
+}

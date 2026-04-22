@@ -1,0 +1,144 @@
+/* RegisterPage.css */
+
+/* Reset global para asegurar centrado */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal del registro */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  background-color: #f6f6f6;
+  position: relative;      /* para elementos fijos */
+  margin: 0;
+  padding: 0;
+}
+
+/* Tarjeta central del registro */
+.register-card {
+  background-color: #fff;
+  padding: 50px 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  width: 400px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  margin: 0; /* ⚡ asegura centrado */
+}
+
+.register-card:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.register-title {
+  font-size: 1.8rem;
+  color: #0f3d2e;
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+.register-card .input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.register-card .input-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.register-card .input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.register-card .input-group input:focus {
+  border-color: #0f3d2e;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Botón de registro */
+.register-btn {
+  width: 100%;
+  background-color: #0f3d2e;
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #14573e;
+}
+
+/* Footer de registro */
+.register-footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-footer a {
+  color: #c2a83e;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Botón flotante home */
+.home-button-wrapper {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 5000;
+}
+
+.home-button-wrapper .home-icon-button {
+  width: 46px;
+  height: 46px;
+  background-color: #0f3d2e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.home-button-wrapper .home-icon-button:hover {
+  background-color: #c9a227;
+  color: #0f3d2e;
+  transform: scale(1.08);
+}

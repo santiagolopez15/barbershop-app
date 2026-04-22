@@ -1,0 +1,101 @@
+.home-icon-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #0f3d2e;
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.home-icon-button:hover {
+  background-color: #c9a227; /* dorado */
+  color: #0f3d2e;
+  transform: scale(1.1);
+}
+
+.home-icon {
+  display: block;
+}
+.sidebar-home-btn {
+  width: 100%;
+  background: white;
+  color: #0f3d2e;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  display: block;
+  transition: 0.2s ease;
+}
+
+.sidebar-home-btn:hover {
+  background: #d1b56c;
+  color: white;
+  transform: translateY(-2px);
+}
+/* Botón pequeño y elegante dentro del sidebar */
+.sidebar-home-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  color: #0f3d2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;         /* Centrado perfecto */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.sidebar-home-icon:hover {
+  background: #d1b56c;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Ícono */
+.sidebar-home-icon-inner {
+  font-size: 1.3rem;
+}
+.home-icon-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: #0f3d2e;
+  color: white;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-size: 22px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, background 0.25s ease;
+
+  z-index: 5000; /* 🔥 más alto, NO afecta layout */
+}
+
+.home-icon-button:hover {
+  background-color: #c9a227;
+  color: #0f3d2e;
+  transform: scale(1.08);
+}
+
+.home-icon {
+  pointer-events: none; /* evita conflictos */
+}
